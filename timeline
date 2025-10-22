@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timeline ORSEN 2025</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fff8a2 50%, #fefbf2 50%);
+    padding: 20px;
+    margin: 0;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #222;
+    font-weight: 700;
+    font-size: 2rem;
+    position: relative;
+  }
+
+  h1::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: #3498db;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+
+  /* ====== TIMELINE STRUCTURE ====== */
+  .timeline {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background: #c5c5c5;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: left 0.3s ease;
+  }
+
+  .container {
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+  }
+
+  .left { left: 0; }
+  .right { left: 50%; }
+
+  /* Timeline point */
+  .container::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 25px;
+    background: #fff;
+    border: 4px solid #3498db;
+    border-radius: 50%;
+    z-index: 1;
+    transition: background 0.3s ease;
+  }
+
+  .left::before { right: -10px; }
+  .right::before { left: -10px; }
+
+  /* Content box */
+  .content {
+    padding: 20px 25px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+
+  .date {
+    font-weight: 600;
+    color: #3498db;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+  }
+
+  .content h3 {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #333;
+  }
+
+  .content p {
+    color: #555;
+    font-size: 0.95rem;
+  }
+
+  /* Category colors */
+  .ml { border-left: 6px solid #9b59b6; }
+  .valorant { border-left: 6px solid #3498db; }
+  .fifa { border-left: 6px solid #27ae60; }
+  .futsal { border-left: 6px solid #f1c40f; }
+  .badminton { border-left: 6px solid #95a5a6; }
+  .seni { border-left: 6px solid #e67e22; }
+
+  /* ====== RESPONSIVE FIX ====== */
+  @media screen and (max-width: 900px) {
+    .timeline::after {
+      left: 25px;
+    }
+
+    .container {
+      width: 100%;
+      padding-left: 60px;
+      padding-right: 20px;
+      margin-bottom: 30px;
+    }
+
+    .container::before {
+      left: 18px;
+      right: auto;
+    }
+
+    .left, .right {
+      left: 0;
+    }
+
+    .content {
+      margin-top: 10px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    body { padding: 15px; }
+    h1 { font-size: 1.6rem; }
+    .content {
+      padding: 15px 18px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<h1>Timeline ORSEN 2025</h1>
+
+<div class="timeline">
+  <div class="container left">
+    <div class="content ml">
+      <div class="date">24 Oktober</div>
+      <h3>Opening & Technical Meeting</h3>
+      <p>Dimulainya seluruh rangkaian kegiatan kompetisi.</p>
+    </div>
+  </div>
+
+  <div class="container right">
+    <div class="content valorant">
+      <div class="date">25 Oktober</div>
+      <h3>- Penyisihan Mobile Legends (Online)</h3>
+      <h3>- Penyisihan Valorant (Online)</h3>
+      <h3>- Penyisihan & Quarter Final Badminton</h3>
+    </div>
+  </div>
+
+  <div class="container left">
+    <div class="content valorant">
+      <div class="date">26 Oktober</div>
+      <h3>- Quarter Final Mobile Legends (Online)</h3>
+      <h3>- Quarter Final Valorant (Online)</h3>
+      <h3>- Semi Final dan Final Badminton</h3>
+    </div>
+  </div>
+
+  <div class="container right">
+    <div class="content fifa">
+      <div class="date">1 November</div>
+      <h3>- Semi Final Mobile Legends (Online)</h3>
+      <h3>- Penyisihan & Quarter Final Futsal</h3>
+    </div>
+  </div>
+
+  <div class="container left">
+    <div class="content fifa">
+      <div class="date">2 November</div>
+      <h3>- Semi Final Valorant (Online)</h3>
+      <h3>- Semi Final & Final Futsal</h3>
+    </div>
+  </div>
+
+  <div class="container right">
+    <div class="content fifa">
+      <div class="date">8 November</div>
+      <h3>- Perebutan Juara 3 dan Final Mobile Legends (Online)</h3>
+      <h3>- Penyisihan, Quarter, dan Semi Final EA FC</h3>
+    </div>
+  </div>
+
+  <div class="container left">
+    <div class="content fifa">
+      <div class="date">9 November</div>
+      <h3>- Perebutan Juara 3 dan Final Valorant (Online)</h3>
+      <h3>- Perebutan Juara 3 dan Final EA FC</h3>
+      <h3>- Seleksi Modern Dance</h3>
+    </div>
+  </div>
+
+  <div class="container right">
+    <div class="content fifa">
+      <div class="date">10 November</div>
+      <h3>Pengumpulan Karya Music Video Band</h3>
+    </div>
+  </div>
+
+  <div class="container left">
+    <div class="content seni">
+      <div class="date">15 November</div>
+      <h3>Closing & Awarding</h3>
+      <p>Penutupan acara dan pengumuman pemenang.</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
